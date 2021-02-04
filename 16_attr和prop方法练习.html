@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16_attr和prop方法练习</title>
+      <script src="jquery-3.1.1.js"></script>
+        <script>
+            $(function (){
+                 //1.给按钮添加点击事件
+                var btn=document.getElementsByTagName("button")[0];
+                btn.onclick=function (){
+                    //2.获取输入框的内容
+                    var input=document.getElementsByTagName("input")[0];
+                    var text=input.value;
+                    //3.修改img的src属性节点的值
+                    // $("img").attr("src",text);
+                    $("img").prop("src",text);
+                }
+
+            });
+        </script>
+</head>
+<body>
+<input type="text">
+<button>切换他图片</button><br>
+<img src="https://i0.hdslb.com/bfs/archive/d4f2562b46ddff07fde9094bef3307e7db5b83d6.png" alt="">
+
+</body>
+</html>

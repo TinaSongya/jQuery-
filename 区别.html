@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区别</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+        /*
+        window.onload=function (ev) {
+            //1.通过原生的js入口函数可以拿到dom元素
+            var img=document.getElementsByTagName("img")[0];
+            console.log(img);
+            //通过原生js入口函数可以拿到dom元素的宽高
+            var width =window.getComputedStyle(img).width;
+            console.log(width);
+        }
+        // 原生JS和jQuery入口函数的加载模式不同
+        //原生JS会等到dom元素加载完毕，并且图片也加载完毕才会执行
+        */
+       /* $(document).ready(function () {
+            //1.通过jquery的入口函数可以拿到dom元素
+            var $img=$("img");
+            console.log($img);
+            //2.
+            var $width=$img.width();
+            console.log($width);
+        });
+        */
+        /*
+        * 1.原生js如果编写了多个入口函数，后面编写的会覆盖前面编写的
+        * jquery编写多个入口函数，后面的不会覆盖前面的
+        * */
+        // window.onload=function (ev){
+        //     alert("hello song");
+        // }
+        // window.onload=function (ev){
+        //     alert("hello 2");
+        // }
+
+        $(document).ready(function (){
+            alert("hello 1");
+        });
+        $(document).ready(function (){
+            alert("hello 2");
+        });
+    </script>
+
+
+</head>
+<body>
+<img src="https://i0.hdslb.com/bfs/archive/d4f2562b46ddff07fde9094bef3307e7db5b83d6.png" alt="">
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_jQuery冲突问题</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="test.js"></script>
+     <script>
+         //1.释放$的使用权
+         //注意点：释放操作必须在编写其他jQuery代码之前编写
+         //      释放之后就不能在使用$,改为使用jQuery
+        // jQuery.noConflict();
+         //2.自定义一个访问符号
+         var tina=jQuery.noConflict();
+         tina(function (){
+            alert("hello 1");
+         });
+     </script>
+
+</head>
+<body>
+
+</body>
+</html>
